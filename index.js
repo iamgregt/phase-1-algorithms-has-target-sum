@@ -1,17 +1,27 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+ array.forEach(num => {
+   if(num === target){
+     return true
+   }else{
+     return false
+   }
+ })
 }
 
 /* 
-  Write the Big O time complexity of your function here
+  O(n)
 */
 
 /* 
-  Add your pseudocode here
+  let i = n
+  if n exists in array
+  return true
+  else, false.
 */
 
 /*
-  Add written explanation of your solution here
+  my functuin will identify the interger. it will then look in the array and return true
+  if the int exists. return false not.
 */
 
 // You can run `node index.js` to view these console logs
