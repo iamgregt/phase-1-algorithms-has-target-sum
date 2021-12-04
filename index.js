@@ -1,17 +1,33 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+ const newArray = array.filter(num => num < target)
+ console.log(newArray)
+ let i = 0
+ let j = newArray.length
+ if (newArray[i] + newArray[j] === target){
+  return true
+ }else{
+   console.log(newArray.length)
+ }
+ 
 }
 
 /* 
-  Write the Big O time complexity of your function here
+  O(n)
 */
 
 /* 
-  Add your pseudocode here
+  filter the array for numbers less than the target
+  for each number, add another number.
+  if total === target
+  return true
+  else, false.
 */
 
 /*
-  Add written explanation of your solution here
+  the function will look in the array and find a number less than the target
+  it will then subtract that number from the target
+  it will reference that remainder and see if it is in the array
+
 */
 
 // You can run `node index.js` to view these console logs
