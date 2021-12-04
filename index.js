@@ -1,14 +1,28 @@
-function hasTargetSum(array, target) {
- const newArray = array.filter(num => num < target)
- console.log(newArray)
- let i = 0
- let j = newArray.length
- if (newArray[i] + newArray[j] === target){
-  return true
- }else{
-   console.log(newArray.length)
- }
+// function hasTargetSum(array, target) {
+//  const newArray = array.filter(num => num <= target)
+//  console.log(newArray)
+//  let i = 0
+//  let j = newArray.length - 1
+//  if (newArray[i] + newArray[j] === target){
+//   return true
+//  }else{
+//    console.log(newArray[i] + newArray[j])
+//  }
  
+// }
+
+function hasTargetSum(array, target){
+  // [3, 8, 12, 4, 11, 7], 10
+  for (let i = 0; i < array.length ; i++ ){
+    for (let j = i + 1; j < array.length ; j++){
+      if((array[i] + array[j]) === target){
+        return true
+      }
+    }
+    return false
+  }
+
+
 }
 
 /* 
