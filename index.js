@@ -11,19 +11,31 @@
  
 // }
 
-function hasTargetSum(array, target){
-  // [3, 8, 12, 4, 11, 7], 10
-  for (let i = 0; i < array.length ; i++ ){
-    for (let j = i + 1; j < array.length ; j++){
-      if((array[i] + array[j]) === target){
-        return true
-      }
+// function hasTargetSum(array, target){
+//   // [3, 8, 12, 4, 11, 7], 10
+//   for (let i = 0; i < array.length ; i++ ){
+//     for (let j = i + 1; j < array.length ; j++){
+//       if((array[i] + array[j]) === target){
+//         return true
+//       }
+//     }
+    
+//   }
+
+// return false
+// }
+
+function hasTargetSum(array, target) {
+  for (let i = 0; i < array.length; i++) {
+    const difference = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === difference) return true;
     }
-    return false
-  }
-
-
+  }return false
 }
+
+//   return false;
+// }
 
 /* 
   O(n)
